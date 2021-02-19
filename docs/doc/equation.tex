@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{indentfirst}
+\begin{document}
+	$ $\\
+	Set $N_{count} = 0$. \\
+	Set $a = 4\pi r^2/N$ and $d=\sqrt{a}$. \\
+	Set $M_{\theta} = round \,[\pi/d]$. \\
+	Set $d_{\theta} = \pi / M_{\theta}$ and $d_{\phi} = a/d_{\theta}$. \\
+	For each $m$ in $0 ... M_{\theta-1}$ do \{ \\
+	\hspace*{0.5cm} Set $\theta = \pi(m+0.5)/M_{\theta}.$\\
+	\hspace*{0.5cm} Set $M_{\varphi} = round\, [2\pi sin\theta /d_{\varphi}].$ \\
+	\hspace*{0.5cm} For each n in $0\,...\,M_{\varphi}-1$ do \{ \\
+	\hspace*{1cm} Set $\varphi = 2\pi n/M_{\varphi}$. \\
+	\hspace*{1cm} Create point using Eqn.(1) \\
+	\hspace*{1cm} $N_{count} += 1$ \\
+	\hspace*{0.5cm} \} \\
+	\} \\
+	\begin{equation}
+	d
+	\end{equation}
+\end{document}

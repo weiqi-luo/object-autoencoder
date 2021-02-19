@@ -1,0 +1,11 @@
+/data/
+<<<<<<< HEAD
+=======
+/checkpoints
+>>>>>>> 4257988b36bbbfff68ba9d35e70d9146ccaeaff3
+.idea/
+*.docx
+*.tmp
+/.vscode
+.~lock*
+/src/__pycache__

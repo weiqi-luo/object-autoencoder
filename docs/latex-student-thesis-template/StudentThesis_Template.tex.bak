@@ -1,0 +1,148 @@
+\documentclass[HCR,BA,english]{HCR_thesis}
+\graphicspath{{pics/}{logos/}}
+
+%% Options:
+%% HCR: HCR Template with Prof. Buss as default
+%% ITR: ITR Template with Prof. Hirche as default
+
+%% BA: Bachelorarbeit
+%% MA: Masterarbeit
+%% HS: Hauptseminar
+%% PP: Projektpraktikum
+%% IP: Ingenieurpraxis
+%% FP: Forschungspraxis
+%% SeA: Semesterarbeit (MW)
+
+%% english
+%% german
+%%% last changes: 05.04.2016 (v.gabler@tum.de)
+
+%_________MACROS_________ (optional and customizable - see output)
+\input{./include/packages.tex}
+\input{./include/macros.tex}
+%_______Start_Document______________________________________
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for an english theis. The title:
+\title{\todo{Add your Title here}Title}
+%% Für deutsche Arbeiten: Deutscher Titel:
+% \title{Die Antwort auf Alles und Mehr - Ein Trauerspiel in 4 Akten}
+% and English translation
+% \titletranslation{Random Thesis With Epic \\ and Ground Breaking Results}
+% data about YOU!:
+\student{\todo{your name}Don Knuth} 			%% your name
+\studtitle{\add[color=cyan!40]{your title}cand.~ing.} 			%% Bachelor of Arts, Dr.~phil, etc.
+\yearofbirth{\todo{date of birth}01.02.3456}	%% date of birth
+\street{\todo{address}Bakerstreet 221B}			%% your address
+\city{8xxxy Munich}								%		"
+\phone{\todo{phone no.}089 - 1234567}			%% your telephone-no.
+
+%% if more students are involved (e.g. PP)
+%--the following parted is not tested ---
+% please report bugs to v.gabler@tum.de
+%\studenttwo{Zweiter Student}
+%\studtitletwo{}
+%\studentthree{}
+%\studtitlethree{}
+%\studentfour{}
+%\studtitlefour{}
+%-----------------------------------------
+\supervisor{\todo[inline]{add your supervisor(S)}}			%% your supervisor
+\start{\todo[inline]{add start date}XX.XX.2016}							%% start date
+\progrep{\optional{add intermediate report delivery date}XX.XX.2016}				%% intermediate presentation (BA/MA only)
+\finalrep{\todo[inline]{add final report delivery date}XX.XX.2016}						%% final presentation / date
+
+\maketitle
+% check for colors! IF there is a color besides black on your title, you just messed it up!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\cleardoublepage
+\phantom{u}
+\phantom{1}\vspace{6cm}
+\begin{center}
+\add[inline]{In your final hardback copy, replace this page with the signed exercise sheet.}
+
+\vspace{3cm}
+
+\todo[inline,color=red!70]{Before modifying this document, READ THE INSTRUCTIONS AND GUIDELINES!}
+\end{center}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\topmargin5mm
+\textheight220mm
+\pagenumbering{arabic}
+\phantom{u}
+\begin{abstract}
+  A short (1--3 paragraphs) summary of the work. Should state the problem, major assumptions, basic idea of solution, results. Avoid non--standard terms and acronyms. The abstract must be able to be read completely on its own, detached from any other work (e.g., in collections of paper abstracts). Don't use references in an abstract.
+\begin{center}	
+\normalsize \textbf{Zusammenfassung}\\
+\end{center}
+Hier die deutschsprachige Zusammenfassung.
+\optional{Talk to your supervisor if this is needed and/or wanted before starting with your thesis}
+\end{abstract}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%% Widmung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantom{u}
+\phantom{1}\vspace{6cm}
+\begin{center}
+%Hier die Widmung oder leer lassen
+\end{center}
+
+
+\pagestyle{fancy}
+
+%%%%%%%%%%%%%%%%%%%Inhaltsverzeichnis%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACTUAL CONTENT OF YOUR WORK %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Kapitel - externe Dateien zur Ordnung%%%%%%%%%%%%%
+\input{./chapters/Tutorial.tex}
+\input{./chapters/Introduction.tex}
+\input{./chapters/MainPart.tex}
+\input{./chapters/Evaluation.tex}
+\input{./chapters/Discussion.tex}
+\input{./chapters/Conclusion.tex}
+
+\appendix
+	\input{./chapters/Appendix.tex}
+%%%%%%%%%%%%%%%%%%_Abbildungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures 	
+
+%%%%%%%%%%%%%%%%%%_Acronyms and Notations %%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\chapter*{Acronyms and Notations}
+\input{./include/acronyms.tex}
+
+%%%%%%%%%%%%%%%%%%Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{mybib}
+\bibliographystyle{alphaurl}
+
+%%%%%%%%%%%%%%%%%%%%License %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\chapter*{License}
+\markright{LICENSE}
+This work is licensed under the Creative Commons Attribution 3.0 Germany
+License. To view a copy of this license,
+visit \href{http://creativecommons.org/licenses/by/3.0/de/}{http://creativecommons.org} or send a letter
+to Creative Commons, 171 Second Street, Suite 300, San
+Francisco, California 94105, USA.
+
+%%%%%%%%%%%%%%%%%%%%List of TODOs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% this MUST be empty and removed in the final version of course!
+\listoftodos
+\end{document}

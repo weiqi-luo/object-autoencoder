@@ -1,0 +1,1 @@
+nautilus ~/workspace/object-autoencoder/data/interim
